@@ -31,4 +31,9 @@ describe('String Calculator', () => {
     test('numbers separated by commas and newlines return their sum', () => {
         expect(add("1\n2,3")).toBe(6);
     });
+
+    //Test that function handle invalid input
+    test('handle non-numeric values', () => {
+        expect(add("1,2,three")).toBe(3);
+    });
 });
